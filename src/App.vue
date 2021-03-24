@@ -1,28 +1,60 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="app">
+  <div class="container">
+    <h2 class="title">Todoアプリ</h2>
+    <transition appear v-cloak>
+     <Index></Index>
+    </transition>
   </div>
+</div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Index from './components/Index'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+
+  components:{
+    Index
   }
+
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "./css/style.css";
+
+#app{
+  font-family: 'Noto Sans JP', sans-serif;
 }
+
+button{
+  border:none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+th{
+  font-weight: 400;
+}
+
+.v-enter,
+.v-leave-to
+ {
+    opacity: 0;
+    transform: translateX(-20px)
+}
+
+.v-leave-active,
+.v-enter-active
+ {
+    transition: 0.5s;
+}
+
+
+input {
+  padding: 0.4em ;
+}
+
 </style>

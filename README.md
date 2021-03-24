@@ -1,4 +1,4 @@
-# my-modal
+# my-Vuex-Todo
 
 ## Project setup
 ```
