@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: "/my-todo/",
+  publicPath: "./",
   outputDir: "docs/",
 };
